@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "sku": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "style": {
+      "type": "string"
+    },
+    "series": {
+      "type": "string"
+    },
+    "sellPrice": {
+      "type": "integer"
+    },
+    "originPrice": {
+      "type": "integer"
+    },
+    "imgUrl": {
+      "type": "string"
+    },
+    "posts": {
+      "via": "products",
+      "collection": "posts"
+    }
+  }
+}

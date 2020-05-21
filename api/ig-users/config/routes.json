@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ig-users",
+      "handler": "ig-users.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ig-users/count",
+      "handler": "ig-users.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ig-users/:id",
+      "handler": "ig-users.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ig-users",
+      "handler": "ig-users.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ig-users/:id",
+      "handler": "ig-users.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ig-users/:id",
+      "handler": "ig-users.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

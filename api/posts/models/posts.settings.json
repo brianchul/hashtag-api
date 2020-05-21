@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "posts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "igPostID": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "postTime": {
+      "type": "datetime"
+    },
+    "carousel": {
+      "type": "boolean"
+    },
+    "campaign": {
+      "model": "campaign",
+      "via": "posts"
+    },
+    "medias": {
+      "collection": "medias",
+      "via": "post"
+    },
+    "owner": {
+      "model": "ig-users",
+      "via": "posts"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "posts",
+      "dominant": true
+    },
+    "products": {
+      "collection": "product",
+      "via": "posts",
+      "dominant": true
+    },
+    "cover": {
+      "type": "string"
+    },
+    "isExpire": {
+      "type": "boolean",
+      "default": false,
+      "private": true,
+      "required": true
+    }
+  }
+}

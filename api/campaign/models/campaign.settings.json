@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "name": "campaign"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "showTag": {
+      "type": "string"
+    },
+    "titleImgUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "posts": {
+      "via": "campaign",
+      "collection": "posts"
+    }
+  }
+}

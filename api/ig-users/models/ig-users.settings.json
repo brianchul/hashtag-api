@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ig_users",
+  "info": {
+    "name": "IGusers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "igUserID": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "private": true
+    },
+    "profileImgUrl": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "posts": {
+      "via": "owner",
+      "collection": "posts"
+    }
+  }
+}

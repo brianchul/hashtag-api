@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medias",
+  "info": {
+    "name": "medias"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "sortID": {
+      "type": "integer"
+    },
+    "mediasType": {
+      "type": "string"
+    },
+    "post": {
+      "via": "medias",
+      "model": "posts"
+    }
+  }
+}
